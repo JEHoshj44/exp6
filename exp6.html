@@ -1,0 +1,95 @@
+<!-- 1 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Digital Clock</title>
+    </head>
+
+    <body onload="display()">
+
+        <h1>Digital Clock</h1>
+        <p id="time"></p>
+
+        <script>
+            function display() 
+            {
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
+                setTimeout(display, 1000);
+            }
+
+            function checkTime(i) 
+            {
+                if (i < 10) {i = "0" + i};
+                return i;
+            }
+
+        </script>
+    </body>
+</html> 
+
+<!-- 2 -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>BG Color changer</title>
+    </head>
+
+    <body onload="color()">
+        <h1>Dynamic Background!</h1>
+        <script >
+            function color()
+            {
+                var red = Math.floor(Math.random()*255);
+                var blue = Math.floor(Math.random()*255);
+                var green = Math.floor(Math.random()*255);
+
+                var color = "rgb("+red+","+green+","+blue+")";
+
+                document.getElementsByTagName("body")[0].style = "background-color:"+color;
+                
+            }
+            setInterval(color,10000);
+            
+        </script>
+    </body>
+</html> -->
+
+<!-- 3 -->
+
+<!-- <!DOCTYPE html>
+<html>
+    <head>
+        <title>Change font size</title>
+    </head>
+    <body>
+        <h1>Change Font size</h1>
+
+        <p id="para1" onmouseover="incSize()" onmouseout="decSize()"> Move cursor over me to zoom in....</p>
+
+        <script>
+            function incSize()
+            {
+                
+                document.getElementById("para1").style = "font-size : 28px";
+            }
+
+            function decSize()
+            {
+                document.getElementById("para1").style = "font-size : auto";
+            }
+            
+        </script>
+    </body>
+</html> -->
+
+
+
+
